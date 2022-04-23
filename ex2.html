@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Nhập số cần kiểm tra:</h1>
+    <input type="number" id="input-number">
+    <button id="checkBtn">Kiểm tra</button>
+    <br>
+    <div id="result"></div>
+    <script>
+        let inputNumber = document.getElementById('input-number');
+        let checkBtn = document.getElementById('checkBtn');
+        let result = document.getElementById('result');
+        checkBtn.addEventListener('click', function(){
+            let number = parseInt(inputNumber.value);
+            let isEven = number %2 ==0?" số chẵn": " số lẻ";
+            result.innerText = number + " là" + isEven;
+        })
+    </script>
+</body>
+
+</html>
